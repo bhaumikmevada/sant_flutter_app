@@ -1,0 +1,42 @@
+<svg width="100%" viewBox="0 0 690 770" role="img" style="" xmlns="http://www.w3.org/2000/svg"><defs><mask id="imagine-text-gaps-gxrt1h" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="690" height="770" fill="white"/><rect x="186.4069366455078" y="425.63201904296875" width="299.88214111328125" height="108.36798095703125" fill="black" rx="2"/></mask></defs>
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">SantApp Logo</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Orange background with a white meditating figure icon and the text "संतapp" in white</desc>
+
+  <!-- Orange background -->
+  <rect width="680" height="760" fill="#F5820D" rx="24" style="fill:rgb(245, 130, 13);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- ─── Meditating figure icon (centered ~340, top ~220) ─── -->
+  <g transform="translate(340, 240)" fill="white" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+
+    <!-- Head circle -->
+    <circle cx="0" cy="-118" r="28" fill="white" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Body — torso flowing into lotus base via a single path -->
+    <!-- Left arm curve -->
+    <path d="M -8,-88 C -60,-60 -90,-10 -80,30" stroke="white" stroke-width="18" fill="none" stroke-linecap="round" style="fill:none;stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:18px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <!-- Right arm curve -->
+    <path d="M  8,-88 C  60,-60  90,-10  80,30" stroke="white" stroke-width="18" fill="none" stroke-linecap="round" style="fill:none;stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:18px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <!-- Center body line down to lap -->
+    <path d="M 0,-88 C 0,-40 0,0 0,30" stroke="white" stroke-width="16" fill="none" stroke-linecap="round" style="fill:none;stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:16px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Lotus / base — two leaf ellipses crossing -->
+    <!-- Left leaf -->
+    <ellipse cx="-54" cy="52" rx="62" ry="22" fill="white" transform="rotate(-18,-54,52)" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <!-- Right leaf -->
+    <ellipse cx=" 54" cy="52" rx="62" ry="22" fill="white" transform="rotate(18,54,52)" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <!-- Center overlap cover to make petals look joined -->
+    <ellipse cx="0" cy="52" rx="30" ry="18" fill="white" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Lap / knees horizontal bar connecting left & right hands -->
+    <path d="M -80,30 Q 0,58 80,30" stroke="white" stroke-width="18" fill="none" stroke-linecap="round" style="fill:none;stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:18px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  </g>
+
+  <!-- ─── Text: संत (Devanagari, bold) + app (Latin) ─── -->
+  <!-- Using a single text element; browsers that support Devanagari will render correctly -->
+  <text x="340" y="510" text-anchor="middle" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="88" font-weight="700" fill="white" letter-spacing="2" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Noto Sans Devanagari&quot;, Mangal, serif;font-size:88px;font-weight:700;text-anchor:middle;dominant-baseline:auto">संत<tspan font-family="Georgia, serif" font-weight="700" font-size="88" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, serif;font-size:88px;font-weight:700;text-anchor:middle;dominant-baseline:auto">app</tspan></text>
+
+  <!-- Underline beneath full text -->
+  <line x1="188" y1="526" x2="492" y2="526" stroke="white" stroke-width="3" stroke-linecap="round" mask="url(#imagine-text-gaps-gxrt1h)" style="fill:rgb(0, 0, 0);stroke:rgb(255, 255, 255);color:rgb(0, 0, 0);stroke-width:3px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+</svg>
