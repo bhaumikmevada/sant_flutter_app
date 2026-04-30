@@ -25,7 +25,7 @@ class ForgotPasswordScreen extends StatefulWidget {
 
 class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
     with SingleTickerProviderStateMixin {
-  final emailController = TextEditingController();
+  final phoneNoController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
 
@@ -36,7 +36,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
 
   @override
   void dispose() {
-    emailController.dispose();
     super.dispose();
   }
 
@@ -44,7 +43,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorWhite,
-      appBar: CustomAppBar(appBar: AppBar(), title: forgotPassword,isBackIcon: true,),
+      appBar: CustomAppBar(appBar: AppBar(), title: forgotPasswordTitle,isBackIcon: true,),
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.all(20),
@@ -58,21 +57,22 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
                 Utilities.buildLogo(),
                 const SizedBox(height: 20),
                 CustomTextFormField(
-                    controller: emailController,
-                    hintText: emailHint,
-                    textInputType: TextInputType.emailAddress,
-                    textInputAction: TextInputAction.next,
+                    controller: phoneNoController,
+                    hintText: phoneNo,
+                    textInputType: TextInputType.phone,
+                    textInputAction: TextInputAction.done,
                     isPrefixIcon: true,
-                    prefixIcon: Icon(Icons.email_outlined,color: colorPrimary,size: 22,),
+                    isMobileNo: true,
+                    prefixIcon: Icon(Icons.phone,color: colorPrimary,size: 22,),
                     onChange: (value){},
                     onTap:() {}
                 ),
                 const SizedBox(height: 20),
           
                 CustomButton(
-                  text: submit,
+                  text: next,
                   callback: (){
-          
+                    context.push(otpScreenRoute);
                   },
                 ),
           

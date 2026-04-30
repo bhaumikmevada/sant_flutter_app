@@ -24,35 +24,18 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen>
     with SingleTickerProviderStateMixin {
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
+  // final emailController = TextEditingController();
+  // final passwordController = TextEditingController();
+  final phoneNoController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-
-  bool _obscurePassword = true;
-  late AnimationController _animController;
-  late Animation<double> _fadeAnim;
-  late Animation<Offset> _slideAnim;
 
   @override
   void initState() {
     super.initState();
-    _animController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 600),
-    );
-    _fadeAnim = CurvedAnimation(parent: _animController, curve: Curves.easeOut);
-    _slideAnim = Tween<Offset>(
-      begin: const Offset(0, 0.08),
-      end: Offset.zero,
-    ).animate(CurvedAnimation(parent: _animController, curve: Curves.easeOut));
-    _animController.forward();
   }
 
   @override
   void dispose() {
-    _animController.dispose();
-    emailController.dispose();
-    passwordController.dispose();
     super.dispose();
   }
 
@@ -100,40 +83,23 @@ class _LoginScreenState extends State<LoginScreen>
 
                     // ── Email Field ──
                     CustomTextFormField(
-                        controller: emailController,
-                        hintText: emailHint,
-                        textInputType: TextInputType.emailAddress,
-                        textInputAction: TextInputAction.next,
+                        controller: phoneNoController,
+                        hintText: phoneNo,
+                        textInputType: TextInputType.phone,
+                        textInputAction: TextInputAction.done,
                         isPrefixIcon: true,
-                        prefixIcon: Icon(Icons.email_outlined,color: colorPrimary,size: 22,),
+                        isMobileNo: true,
+                        prefixIcon: Icon(Icons.phone,color: colorPrimary,size: 22,),
                         onChange: (value){},
                         onTap:() {}
                     ),
 
                     const SizedBox(height: 14),
-
-                    // ── Password Field ──
-                    CustomTextFormField(
-                        controller: passwordController,
-                        hintText: passwordHint,
-                        textInputType: TextInputType.visiblePassword,
-                        textInputAction: TextInputAction.next,
-                        isPrefixIcon: true,
-                        prefixIcon: Icon(Icons.lock_outline_rounded,color: colorPrimary,size: 22,),
-                        obscureText: true,
-                        onChange: (value){},
-                        onTap:() {}
-                    ),
-
-                    const SizedBox(height: 10),
-
                     // ── Forgot Password ──
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
                         onPressed: () {
-                          emailController.clear();
-                          passwordController.clear();
                           context.push(forgotPasswordScreenRoute);
                         },
                         style: TextButton.styleFrom(
@@ -244,8 +210,6 @@ class _LoginScreenState extends State<LoginScreen>
                         ),
                         GestureDetector(
                           onTap: () {
-                            emailController.clear();
-                            passwordController.clear();
                             context.push(registerScreenRoute);
                           },
                           child: Text(

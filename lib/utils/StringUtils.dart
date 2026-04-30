@@ -5,7 +5,7 @@ const register = "Register";
 const signIn = "Sign In";
 const createAccountTitle = "Create Account";
 const welcomeBack = "Welcome back";
-const signInTo = "Sign in to manage sant";
+const signInTo = "SignIn To Manage Sant";
 const emailHint = "Email";
 const phoneNo = "Mobile no";
 const descriptionHint = "Enter Message Here..";
@@ -31,7 +31,7 @@ const createAccount = "Create an Account";
 const backToLogin = "Back to Login";
 const otpHint = "Enter one-time password";
 const sendOtpDesc = "We have send one-time password in your email";
-const newPasswordHint = "Enter New Password";
+const newPasswordHint = "New Password";
 const confirmNewPasswordHint = "Confirm New Password";
 
 const noInternet = "Please check the internet connection\n and try again.";
@@ -59,13 +59,6 @@ const galleryOption = "Upload Image";
 const cameraOption = "Capture Image";
 
 const home = "Home";
-const unLockPremium = "Unlock Premium";
-const questionOfTheDay = "Question of the Day";
-const quizzes = "Quizzes";
-const quizHistory = "Quiz History";
-const leaderBoard = "Leaderboard";
-const podCast = "Podcast";
-const tutoringPackage = "Tutoring Package";
 const aboutUs = "About Us";
 const contactUs = "Contact Us";
 const privacyPolicy = "Privacy Policy";
@@ -73,8 +66,13 @@ const account = "Account";
 const deleteAccount = "Delete Account";
 const deleteAccountMsg = "Are you sure you want to delete account?";
 const submit = "Submit";
-
-
+const selectCity = "Select City";
+const selectState = "Select State";
+const selectSampraday = "Select Sampraday";
+const selectRole = "Select Role";
+const selectGender = "Select Gender";
+const otpTitle = "OTP Verify";
+const verify = "Verify";
 //Validation Strings
 const validationFullName = "Please enter Full Name";
 const validationFirstName = "Please enter First Name";
