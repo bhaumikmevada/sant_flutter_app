@@ -36,6 +36,7 @@ class _RegisterScreenState extends State<RegisterScreen>
   String? _selectedState;
 
   final List<String> genderList = ['Male', 'Female',];
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   final List<String> roleList = [
     'Admin',
@@ -221,7 +222,8 @@ class _RegisterScreenState extends State<RegisterScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorWhite,
-      appBar: CustomAppBar(appBar: AppBar(), title: createAccountTitle,isBackIcon: true,),
+      key: _scaffoldKey,
+      appBar: CustomAppBar(scaffoldKey: _scaffoldKey,appBar: AppBar(), title: createAccountTitle,isBackIcon: true,),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 24),

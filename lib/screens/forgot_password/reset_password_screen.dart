@@ -23,6 +23,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
   final newPasswordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -37,8 +38,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: colorWhite,
-      appBar: CustomAppBar(appBar: AppBar(), title: resetPassword,isBackIcon: true,),
+      appBar: CustomAppBar(scaffoldKey: _scaffoldKey,appBar: AppBar(), title: resetPassword,isBackIcon: true,),
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.all(20),

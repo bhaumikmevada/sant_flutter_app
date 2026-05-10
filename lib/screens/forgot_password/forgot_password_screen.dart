@@ -29,7 +29,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
 
   final _formKey = GlobalKey<FormState>();
 
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   void initState() {
   }
@@ -42,8 +42,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: colorWhite,
-      appBar: CustomAppBar(appBar: AppBar(), title: forgotPasswordTitle,isBackIcon: true,),
+      appBar: CustomAppBar(scaffoldKey: _scaffoldKey,appBar: AppBar(), title: forgotPasswordTitle,isBackIcon: true,),
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.all(20),

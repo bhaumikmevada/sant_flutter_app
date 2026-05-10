@@ -206,8 +206,8 @@ class Utilities{
 
   }
 
-  static void showConfirmAlertDialog(BuildContext context, String message,bool isDarkMode,VoidCallback okListener,{String title = appName,
-  String btnYesText = yes,String btnNoText = no}){
+  static void showConfirmAlertDialog(BuildContext context, String message,VoidCallback okListener,{String title = appName,
+  String btnYesText = yes,String btnNoText = no,bool isDarkMode = false}){
     showDialog(
         context: context,
         builder: (context){

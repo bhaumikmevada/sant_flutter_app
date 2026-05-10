@@ -4,8 +4,10 @@ import 'package:go_router/go_router.dart';
 import 'package:sant_flutter_appp/screens/change_password/change_password_screen.dart';
 import 'package:sant_flutter_appp/screens/forgot_password/forgot_password_screen.dart';
 import 'package:sant_flutter_appp/screens/forgot_password/reset_password_screen.dart';
+import 'package:sant_flutter_appp/screens/home/home_screen.dart';
 import 'package:sant_flutter_appp/screens/login/login_screen.dart';
 import 'package:sant_flutter_appp/screens/otp/otp_screen.dart';
+import 'package:sant_flutter_appp/screens/profile/profile_screen.dart';
 import 'package:sant_flutter_appp/screens/register/register_screen.dart';
 
 import '../screens/splash_screen.dart';
@@ -17,6 +19,8 @@ const forgotPasswordScreenRoute = "/ForgotPassword";
 const otpScreenRoute = "/OtpScreen";
 const changePasswordScreenRoute = "/ChangePasswordScreen";
 const resetPasswordScreenRoute = "/ResetPasswordScreen";
+const homeScreenRoute = "/HomeScreen";
+const profileScreenRoute = "/ProfileScreen";
 
 class AppRoutes{
 
@@ -57,6 +61,16 @@ class AppRoutes{
             path: changePasswordScreenRoute,
             name: changePasswordScreenRoute,
             builder: (context,state) => ChangePasswordScreen()
+        ),
+        GoRoute(
+            path: homeScreenRoute,
+            name: homeScreenRoute,
+            builder: (context,state) => HomeScreen()
+        ),
+        GoRoute(
+            path: profileScreenRoute,
+            name: profileScreenRoute,
+            builder: (context,state) => ProfileScreen()
         )
       ]
   );

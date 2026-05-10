@@ -118,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen>
                     CustomButton(
                       text: login,
                       callback: (){
-
+                        context.go(homeScreenRoute);
                       },
                     ),
 

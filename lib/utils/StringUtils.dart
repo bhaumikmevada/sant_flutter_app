@@ -1,5 +1,5 @@
 
-const appName = "MBLEx";
+const appName = "SantApp";
 const login = "Login";
 const register = "Register";
 const signIn = "Sign In";
@@ -57,6 +57,16 @@ const noDataFound = "No Data Found";
 const selectImage = "Select Image";
 const galleryOption = "Upload Image";
 const cameraOption = "Capture Image";
+const myProfile = "My Profile";
+
+const dashboard = "Dashboard";
+const event = "Events";
+const bookMark = "Bookmarks";
+const temple = "Temples";
+const location = "Location";
+const maps = "Maps";
+const notification = "Notifications";
+const helpSupport = "Help & Support";
 
 const home = "Home";
 const aboutUs = "About Us";

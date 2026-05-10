@@ -1,78 +1,85 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'ColorUtils.dart';
-import 'ImageUtils.dart';
 
-class CircleImage extends StatelessWidget {
 
-  double width = 70;
-  double height = 70;
-  bool isNetworkImage = false;
-  bool isFileImage = false;
-  String image = appLogo;
-  double radius = 50;
-  Color borderColor = colorPrimary;
-  double borderWidth = 1;
-  Color backgroundColor = colorWhite;
-  File? file;
+class Circleimage extends StatelessWidget {
 
-  CircleImage({
-    Key? key,
-    this.width = 100,
-    this.height = 100,
+  bool isAssetsImage;
+  bool isNetworkImage;
+  bool isSvgImage;
+  double width;
+  double height;
+  String image;
+  EdgeInsetsGeometry margin = EdgeInsets.only(right: 10);
+  double radius;
+  bool isBorderVisible;
+  Color borderColor;
+  double borderWidth;
+
+  Circleimage({
+    super.key,
+    required this.width,
+    required this.height,
+    required this.image,
+    this.isAssetsImage = false,
     this.isNetworkImage = false,
-    this.image = appLogo,
-    this.radius = 50,
-    required this.borderColor,
+    this.isSvgImage = false,
+    required this.margin,
+    this.radius = 50.0,
+    this.isBorderVisible = false,
     this.borderWidth = 1,
-    required this.backgroundColor,
-     this.file
-
-  }) : super(key: key);
+    this.borderColor = colorBlack
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
-      height: height,
-      // decoration: BoxDecoration(
-      //     image: isNetworkImage ? DecorationImage(
-      //       image: NetworkImage(image),
-      //       fit: BoxFit.cover,
-      //     ) : file != null ? DecorationImage(
-      //     image: FileImage(file!) ,
-      //     fit: BoxFit.cover,
-      //   ) :
-      //     DecorationImage(
-      //       image: AssetImage(profileHolder),
-      //       fit: BoxFit.cover,
-      //     ),
-      //   borderRadius:  BorderRadius.all( Radius.circular(radius)),
-      //   // border: Border.all(
-      //   //   color: borderColor,
-      //   //   width: borderWidth,
-      //   // ),
-      // ),
-
-      /*decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(
-          color: borderColor,
-          width: borderWidth,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(radius)),
+          border: Border.all(
+              color: borderColor,width: isBorderVisible ? borderWidth : 0
+          )
+      ),
+      margin: margin,
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(radius)),
+        child: isNetworkImage ? Image.network(
+          image,
+          width: width,
+          height: height,
+          fit: BoxFit.fill,
+          errorBuilder: (context,error,stackTrace){
+            return Container(
+              width: width,
+              height: height,
+            );
+          },
+        ) : isAssetsImage ? Image.asset(
+          image,
+          width: width,
+          height: height,
+          fit: BoxFit.cover,
+          errorBuilder: (context,error,stackTrace){
+            return Container(
+              width: width,
+              height: height,
+            );
+          },
+        ) : SvgPicture.asset(
+          image,
+          width: width,
+          height: height,
+          fit: BoxFit.cover,
+          errorBuilder: (context,error,stackTrace){
+            return Container(
+              width: width,
+              height: height,
+            );
+          },
         ),
       ),
-      child: CircleAvatar(
-        radius: radius,
-        backgroundColor: backgroundColor,
-        child: Center(
-          child: isNetworkImage ? Image.network(image) : file != null ? Image.file(file!) : SvgPicture.asset(image,width: 70,height: 70,),
-        )
-      ),
-      padding: EdgeInsets.only(bottom: 10),*/
     );
-
   }
 }

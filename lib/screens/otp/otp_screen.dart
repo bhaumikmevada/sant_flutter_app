@@ -28,11 +28,12 @@ class _OtpScreenState extends State<OtpScreen> {
   String otpCode = "";
 
   final _formKey = GlobalKey<FormState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _startTimer();
+    // _startTimer();
   }
 
   void _startTimer() {
@@ -69,7 +70,8 @@ class _OtpScreenState extends State<OtpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorWhite,
-      appBar: CustomAppBar(appBar: AppBar(), title: otpTitle,isBackIcon: true,),
+      key: _scaffoldKey,
+      appBar: CustomAppBar(scaffoldKey: _scaffoldKey,appBar: AppBar(), title: otpTitle,isBackIcon: true,),
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.all(20),
@@ -94,7 +96,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 ),
 
                 const SizedBox(height: 20),
-                _enableResend
+                !_enableResend
                     ? GestureDetector(
                   onTap: _resendOtp,
                   child: CustomText.TextRegular("Resend OTP",color: colorPrimary),

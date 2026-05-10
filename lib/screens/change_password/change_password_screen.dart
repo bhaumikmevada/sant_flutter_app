@@ -23,8 +23,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen>
   final newPasswordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -39,8 +38,9 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: colorWhite,
-      appBar: CustomAppBar(appBar: AppBar(), title: createAccountTitle,isBackIcon: true,),
+      appBar: CustomAppBar(scaffoldKey: _scaffoldKey,appBar: AppBar(), title: createAccountTitle,isBackIcon: true,),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 24),
