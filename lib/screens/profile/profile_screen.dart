@@ -88,28 +88,33 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   _buildCard(
                     Icons.person_outline,
-                    "Edit profile",
+                    editProfileScreenRoute,
+                    editProfile,
                   ),
 
                   _buildCard(
                     Icons.lock_outline,
+                    changePasswordScreenRoute,
                     "Change password",
                   ),
 
                   _buildCard(
                     Icons.location_on_outlined,
+                    "",
                     "My location",
                     trailing: "Vrindavan, UP",
                   ),
 
                   _buildCard(
                     Icons.temple_hindu_outlined,
+                    "",
                     "Assigned temple",
                     trailing: "ISKCON",
                   ),
 
                   _buildCard(
                       Icons.calendar_month_outlined,
+                      "",
                       "Joined",trailing: "10 May 2026"
                   ),
 
@@ -258,39 +263,45 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildCard(
       IconData icon,
+      String routeScreen,
       String title, {
         String? trailing,
       }) {
 
-    return Container(
-      margin: EdgeInsets.only(right: 5,top: 5),
-      padding: EdgeInsets.only(top: 3,bottom: 2,left: 10,right: 10),
-      child: Column(
-        children: [
+    return GestureDetector(
+      onTap: (){
+        context.push(routeScreen);
+      },
+      child: Container(
+        margin: EdgeInsets.only(right: 5,top: 5),
+        padding: EdgeInsets.only(top: 3,bottom: 2,left: 10,right: 10),
+        child: Column(
+          children: [
 
-          Row(
-            children: [
-              CircleAvatar(
-                radius: 25,
-                backgroundColor: Colors.orange.shade50,
-                child: Icon(icon, color: colorPrimary),
-              ),
+            Row(
+              children: [
+                CircleAvatar(
+                  radius: 25,
+                  backgroundColor: Colors.orange.shade50,
+                  child: Icon(icon, color: colorPrimary),
+                ),
 
-              const SizedBox(width: 10,),
-              Expanded(
-                child: CustomText.TextMedium(title,fontSize: 13.0),
-              ),
+                const SizedBox(width: 10,),
+                Expanded(
+                  child: CustomText.TextMedium(title,fontSize: 13.0),
+                ),
 
-              trailing != null
-                  ? CustomText.TextRegular(trailing,fontSize: 11.0)
-                  : const Icon(Icons.chevron_right,color: color8D8D94,),
+                trailing != null
+                    ? CustomText.TextRegular(trailing,fontSize: 11.0)
+                    : const Icon(Icons.chevron_right,color: color8D8D94,),
 
-            ],
-          ),
+              ],
+            ),
 
-          Divider(color: colorBackgroundLight,)
+            Divider(color: colorBackgroundLight,)
 
-        ],
+          ],
+        ),
       ),
     );
 

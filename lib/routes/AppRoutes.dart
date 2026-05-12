@@ -7,6 +7,7 @@ import 'package:sant_flutter_appp/screens/forgot_password/reset_password_screen.
 import 'package:sant_flutter_appp/screens/home/home_screen.dart';
 import 'package:sant_flutter_appp/screens/login/login_screen.dart';
 import 'package:sant_flutter_appp/screens/otp/otp_screen.dart';
+import 'package:sant_flutter_appp/screens/profile/edit_profile_screen.dart';
 import 'package:sant_flutter_appp/screens/profile/profile_screen.dart';
 import 'package:sant_flutter_appp/screens/register/register_screen.dart';
 
@@ -21,6 +22,7 @@ const changePasswordScreenRoute = "/ChangePasswordScreen";
 const resetPasswordScreenRoute = "/ResetPasswordScreen";
 const homeScreenRoute = "/HomeScreen";
 const profileScreenRoute = "/ProfileScreen";
+const editProfileScreenRoute = "/EditProfile";
 
 class AppRoutes{
 
@@ -71,6 +73,11 @@ class AppRoutes{
             path: profileScreenRoute,
             name: profileScreenRoute,
             builder: (context,state) => ProfileScreen()
+        ),
+        GoRoute(
+            path: editProfileScreenRoute,
+            name: editProfileScreenRoute,
+            builder: (context,state) => EditProfileScreen()
         )
       ]
   );

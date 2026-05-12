@@ -58,6 +58,9 @@ const selectImage = "Select Image";
 const galleryOption = "Upload Image";
 const cameraOption = "Capture Image";
 const myProfile = "My Profile";
+const captureFromCamera = "Capture from Camera";
+const pickFromGallery = "Pick from Gallery";
+const editProfile = "Edit Profile";
 
 const dashboard = "Dashboard";
 const event = "Events";

@@ -7,6 +7,7 @@ const Color colorDisable = Color(0xFFDAD9D9);
 const Color colorFbBackground = Color(0xFF1877F2);
 const Color iconColor = Color(0xFFF0FDF4);
 const Color colorBackgroundLight = Color(0xFFf5f4ed);
+const Color colorABB5B3 = Color(0xFFABB5B3);
 // const Color colorText = Color(0xFF1F2A40);
 const Color colorText = Color(0xFF34363E);
 const Color colorE6E6E6 = Color(0xFFe6e6e6);

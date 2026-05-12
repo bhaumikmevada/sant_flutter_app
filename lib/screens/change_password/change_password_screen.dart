@@ -40,18 +40,19 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen>
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: colorWhite,
-      appBar: CustomAppBar(scaffoldKey: _scaffoldKey,appBar: AppBar(), title: createAccountTitle,isBackIcon: true,),
+      appBar: CustomAppBar(scaffoldKey: _scaffoldKey,appBar: AppBar(), title: changePassword,isMenuIcon: false,isBackIcon: true,),
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Container(
+          margin: EdgeInsets.all(16),
           child: Form(
             key: _formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-
+          
                 Utilities.buildLogo(),
-
+          
                 const SizedBox(height: 28),
                 CustomTextFormField(
                     controller: newPasswordController,
@@ -65,7 +66,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen>
                     onTap:() {}
                 ),
                 const SizedBox(height: 10),
-
+          
                 CustomTextFormField(
                     controller: confirmPasswordController,
                     hintText: passwordHint,
@@ -77,15 +78,15 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen>
                     onChange: (value){},
                     onTap:() {}
                 ),
-                const SizedBox(height:10,),
-
+                const SizedBox(height:20,),
+          
                 CustomButton(
                   text: submit,
                   callback: (){
-
+          
                   },
                 ),
-
+          
               ],
             ),
           ),
