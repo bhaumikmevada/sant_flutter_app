@@ -2,6 +2,8 @@
 
 import 'package:go_router/go_router.dart';
 import 'package:sant_flutter_appp/screens/change_password/change_password_screen.dart';
+import 'package:sant_flutter_appp/screens/event/add_event_screen.dart';
+import 'package:sant_flutter_appp/screens/event/event_list_screen.dart';
 import 'package:sant_flutter_appp/screens/forgot_password/forgot_password_screen.dart';
 import 'package:sant_flutter_appp/screens/forgot_password/reset_password_screen.dart';
 import 'package:sant_flutter_appp/screens/home/home_screen.dart';
@@ -10,6 +12,7 @@ import 'package:sant_flutter_appp/screens/otp/otp_screen.dart';
 import 'package:sant_flutter_appp/screens/profile/edit_profile_screen.dart';
 import 'package:sant_flutter_appp/screens/profile/profile_screen.dart';
 import 'package:sant_flutter_appp/screens/register/register_screen.dart';
+import 'package:sant_flutter_appp/screens/sant/sant_list_screen.dart';
 
 import '../screens/splash_screen.dart';
 
@@ -23,6 +26,10 @@ const resetPasswordScreenRoute = "/ResetPasswordScreen";
 const homeScreenRoute = "/HomeScreen";
 const profileScreenRoute = "/ProfileScreen";
 const editProfileScreenRoute = "/EditProfile";
+const santListScreenRoute = "/SantListScreen";
+const eventListScreenRoute = "/EventListScreen";
+const addEventScreenRoute = "/AddEventScreen";
+
 
 class AppRoutes{
 
@@ -78,6 +85,21 @@ class AppRoutes{
             path: editProfileScreenRoute,
             name: editProfileScreenRoute,
             builder: (context,state) => EditProfileScreen()
+        ),
+        GoRoute(
+            path: santListScreenRoute,
+            name: santListScreenRoute,
+            builder: (context,state) => SantListScreen()
+        ),
+        GoRoute(
+            path: eventListScreenRoute,
+            name: eventListScreenRoute,
+            builder: (context,state) => EventListScreen()
+        ),
+        GoRoute(
+            path: addEventScreenRoute,
+            name: addEventScreenRoute,
+            builder: (context,state) => AddEventScreen()
         )
       ]
   );

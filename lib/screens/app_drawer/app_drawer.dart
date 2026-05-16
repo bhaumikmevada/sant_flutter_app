@@ -173,6 +173,11 @@ class AppDrawer extends StatelessWidget {
                     _buildDrawerItem(context, temple, 'Browse all temples',
                         Icons.temple_hindu_rounded,Color(0xFF10B981),Color(0xFFECFDF5),temple),
 
+                    _buildDrawerItem(context, sants, 'All registered sants',
+                        Icons.group_outlined,Color(0xFF10B981),Color(0xFFECFDF5),sants,onTap: (){
+                          context.push(santListScreenRoute);
+                        }),
+
                     _buildDrawerItem(context, location, 'Sant current locations',
                         Icons.location_on_rounded,Color(0xFFF43F5E),Color(0xFFFFF1F2),location),
 
@@ -377,9 +382,9 @@ class AppDrawer extends StatelessWidget {
           case dashboard:
             context.go(homeScreenRoute);
             break;
-          // case menuDisplay:
-          //   context.push(displayListScreenRoute);
-          //   break;
+          case event:
+            context.push(eventListScreenRoute);
+            break;
           // case menuPlaylist:
           //   context.push(playlistScreenRoute);
           //   break;

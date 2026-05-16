@@ -97,7 +97,6 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             filled: true,
             fillColor: isDarkMode ? colorBlack : widget.fillColor,
             border: InputBorder.none,
-
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(widget.radius),
               borderSide: widget.isBorderVisible ? BorderSide(

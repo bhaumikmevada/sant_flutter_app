@@ -33,6 +33,10 @@ const otpHint = "Enter one-time password";
 const sendOtpDesc = "We have send one-time password in your email";
 const newPasswordHint = "New Password";
 const confirmNewPasswordHint = "Confirm New Password";
+const eventName = "Event Name";
+const eventLocation = "Event Location";
+const eventDescription = "Event Description";
+const eventDate = "Event Date";
 
 const noInternet = "Please check the internet connection\n and try again.";
 const next = "Next";
@@ -61,6 +65,8 @@ const myProfile = "My Profile";
 const captureFromCamera = "Capture from Camera";
 const pickFromGallery = "Pick from Gallery";
 const editProfile = "Edit Profile";
+const sants = "Sants";
+const eventSelectType = "Select Event Type";
 
 const dashboard = "Dashboard";
 const event = "Events";
@@ -70,6 +76,7 @@ const location = "Location";
 const maps = "Maps";
 const notification = "Notifications";
 const helpSupport = "Help & Support";
+const addEvent = "Add Event";
 
 const home = "Home";
 const aboutUs = "About Us";

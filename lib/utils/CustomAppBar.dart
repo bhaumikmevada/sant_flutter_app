@@ -18,8 +18,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSize{
   bool isMenuIcon;
   VoidCallback? onBackPress;
   bool isBackListener = false;
+  bool isNotificationIcon;
+  bool isAddIcon;
   final GlobalKey<ScaffoldState> scaffoldKey;
-
+  VoidCallback? onAddPress;
   CustomAppBar({
     super.key,
     required this.appBar,
@@ -28,6 +30,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSize{
     this.isBackIcon = false,
     this.onBackPress,
     this.isBackListener = false,
+    this.isNotificationIcon = true,
+    this.isAddIcon = false,
+    this.onAddPress,
     required this.scaffoldKey,
   });
 
@@ -61,6 +66,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSize{
             color: colorWhite,
           ),
         ),
+        isNotificationIcon ?
         Stack(
           clipBehavior: Clip.none,
           children: [
@@ -92,7 +98,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSize{
               ),
             ),
           ],
-        ),
+        ) : Container(),
+        isAddIcon ? GestureDetector(
+          onTap: (){
+            onAddPress?.call();
+          },
+          child: Container(
+            margin: const EdgeInsets.only(top: 10, bottom: 10),
+            width: 38, height: 38,
+            decoration: BoxDecoration(
+              color: const Color(0xFFFAFAF8),
+              borderRadius: BorderRadius.circular(11),
+              border: Border.all(color: Colors.grey.shade200),
+            ),
+            child: Icon(Icons.add,
+                color: colorPrimary, size: 20),
+          ),
+        ) : Container(),
         const SizedBox(width: 10,),
       ],
     );

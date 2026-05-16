@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildQuickActions() {
     final actions = [
-      {'icon': Icons.person_add_rounded,   'lbl': 'Add Sant', },
+      {'icon': Icons.person_add_rounded,   'lbl': 'Sants', },
       {'icon': Icons.temple_hindu_rounded, 'lbl': 'Add Temple', },
       {'icon': Icons.event_rounded,        'lbl': 'Add Event',},
       {'icon': Icons.map_rounded,          'lbl': 'Live Map',},
